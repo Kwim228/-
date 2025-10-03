@@ -1,0 +1,481 @@
+/* Полный CSS с переменными для всех цветов
+   Все селекторы из твоего исходного файла включены и цвета вынесены в переменные
+*/
+
+:root {
+    /* Цвета */
+    --color-bg: #f5f5f7;
+    --color-text: #000000;
+    --color-white: #ffffff;
+    --color-black: #000000;
+    --color-accent: #F8303E;
+    --color-dark-gray: #2b2b2b;
+    --color-gray-light: #d6d6d6;
+    --color-gray-medium: #e2e2e2;
+    --color-gray-text: #1a1a1a;
+
+    /* Выделение */
+    --selection-bg: var(--color-accent);
+    --selection-text: var(--color-white);
+
+    /* Бордеры */
+    --border-color: var(--color-black);
+    --footer-border-color: var(--color-black);
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 10px 0px;
+    background-color: var(--color-bg);
+    font-family: Roboto;
+    color: var(--color-text);
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url(./fonts/Roboto-VariableFont_wdth\,wght.ttf);
+}
+
+@font-face {
+    font-family: Andika;
+    src: url(./fonts/Andika-Bold.ttf);
+}
+
+::selection{
+    background-color: var(--selection-bg); /* цвет фона при выделении */
+    color: var(--selection-text);   
+}
+
+::-webkit-selection {
+    background-color: var(--selection-bg);
+    color: var(--selection-text);
+}
+
+.navBar{
+    flex: 0;
+    padding: 0px 100px;
+    display: flex;
+    top: 5px;
+    border-top: var(--border-color) 1px solid;
+    border-bottom: var(--border-color) 1px solid;
+    background-color: var(--color-white);
+    position: fixed;
+    align-items: center;
+    align-content: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.logo{
+    width: auto;
+    flex: 0;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+
+.logoImg{
+    width: 50%;
+    margin-right: 10px;
+}
+
+.navigation{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    align-items: center;
+}
+
+.navItems{
+    padding: 0px 15px;
+    font-size: 14px;
+    text-decoration: none;
+    transition: 100ms ease-in;
+}
+
+a:active{
+    color: var(--color-black);
+}
+
+a:visited{
+    color: var(--color-black);
+}
+
+.navItems:hover{
+    color: var(--color-accent);
+}
+
+.contactBtn{
+    padding: 0px 20px;
+    background-color: var(--color-accent);
+    color: var(--color-white);
+    border: none;
+    transition: 150ms ease-in;
+}
+
+.contactBtn:hover{
+    background-color: var(--color-dark-gray);
+    cursor: pointer;
+}
+
+.contactBtnDiv{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    flex-wrap: nowrap;
+}
+
+.themeToggle{
+    background-color: var(--color-accent);
+    border: none;
+    transition: 150ms ease-in;
+    margin: 0px 10px;
+}
+
+.container{
+    padding: 0px 100px;
+    margin: 0px 0px 50px 0px;
+}
+
+.header{
+    width: 45%;
+    margin: 150px 0px;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.webDesignerDiv{
+    width: fit-content;
+    background-color: var(--color-white);
+    padding: 5px;
+    font-size: 12px;
+}
+
+.webDesigner{
+    margin: 0px;
+}
+
+.title{
+    /* пустой селектор оставлен для возможных стилей */
+}
+
+.subTitle{
+    line-height: 150%;
+}
+
+.skilParametrs{
+    margin: 5px 0px;
+}
+
+.shary{
+    font-size: 64px;
+    margin: 0px;
+}
+
+.vlad{
+    font-size: 64px;
+    color: var(--color-accent);
+    margin: 0px;
+}
+
+.download{
+    padding: 15px 30px;
+    background-color: var(--color-white);
+    color: var(--color-black);
+    border: none;
+    transition: 150ms ease-in;
+}
+
+.download:hover{
+    background-color: var(--color-black);
+    color: var(--color-white);
+    cursor: pointer;
+}
+
+.talkAbout{
+    margin: 0px 20px 0px 0px;
+    padding: 15px 30px;
+    background-color: var(--color-black);
+    color: var(--color-white);
+    border: none;
+    transition: 150ms ease-in;
+}
+
+.talkAbout:hover{
+    background-color: var(--color-dark-gray);
+    color: var(--color-white);
+    cursor: pointer;
+}
+
+.myWork{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.titlePortfolio{
+    width: fit-content;
+    display: grid;
+    gap: 10px;
+    margin-bottom: 30px;
+    align-content: center;
+}
+
+.whatIDo{
+    margin: 0px;
+    width: fit-content;
+    font-size: 12px;
+    color: var(--color-gray-text);
+}
+
+.textMyWork{
+    margin: 0px;
+    width: fit-content;
+    font-size: 48px;
+    color: var(--color-accent);
+}
+
+.descriptionPortfolio{
+    width: 30%;
+    line-height: 150%;
+}
+
+.firstProject{
+    display: flex;
+}
+
+.firstProjectImg{
+    width: fit-content;
+}
+
+.descriptionFirstProject{
+    margin: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.descriptionContentFirstProject{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.year{
+    font-size: 32px;
+}
+
+.line{
+    width: 120px;
+}
+
+hr{
+    border: var(--color-gray-light) 0.5px solid;
+}
+
+.name{
+    font-size: 32px;
+    color: var(--color-accent);
+}
+
+.description{
+    /* пустой селектор для контента */
+}
+
+.yearP{
+    margin: 0px;
+}
+
+.nameP{
+    margin: 0px;
+}
+
+.secondProject{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.process{
+    display: flex;
+    background-color: var(--color-white);
+    padding: 40px 100px;
+    justify-content: space-between;
+}
+
+.processTitles{
+    width: 30%;
+    height: fit-content;
+    position: sticky;
+    top: 100px;
+}
+
+.processTitlesDiv{
+    display: flex;
+}
+
+.listDiv{
+    width: fit-content;
+    height: fit-content;
+}
+
+.listElement {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px; /* расстояние между числом и текстом */
+    border-bottom: var(--color-gray-light) 1px solid;
+    margin: 20px 0px 20px 0px;
+}
+
+.number {
+    margin: 0px;
+    color: var(--color-gray-medium);
+    font-size: 64px;
+}
+
+.listTitles {
+    display: inline-block; /* блок подстраивается под контент */
+    width: fit-content;
+}
+
+.listTitle {
+    color: var(--color-black);
+    font-size: 32px;
+    margin: 10px 0px 20px 0px;
+}
+
+.listSubTitle {
+    margin: 20px 0px;
+    color: var(--color-gray-text);
+    max-width: 400px; /* ограничь по желанию, чтобы не растягивался слишком */
+    line-height: 150%;
+}
+
+.commentsContainer{
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.commentsDiv{
+    width: 45%;
+}
+
+.commentsYear{
+    border-top: var(--color-accent) 1px solid;
+    color: var(--color-gray-light);
+}
+
+.commentsText{
+    font-size: 18px;
+    line-height: 150%;
+}
+
+.commentsNameCompany{
+    /* пустой селектор для имени/компании */
+}
+
+.contactTitle{
+    /* font-size: 24px; */
+    margin: 0px;
+}
+
+.contactInfo{
+    font-size: 24px;
+    transition: 100ms ease-in;
+}
+
+.contactInfo:hover{
+    color: var(--color-accent);
+    cursor: pointer;
+}
+
+.contactContainer{
+    padding: 0px 0px 20px 0px;
+}
+
+footer{
+    background-color: var(--color-white);
+    display: flex;
+    padding: 0px 100px;
+    margin: 50px 0px 50px 0px;
+    border: var(--footer-border-color) 1px solid;
+    justify-content: space-between;
+}
+
+.footerNav{
+    color: var(--color-white);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.footerLogo{
+    width: auto;
+    flex: 0;
+    color: var(--color-black);
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+
+.footerNavItems{
+    color: var(--color-black);
+    margin: 0px 10px;
+    text-decoration: none;
+    transition: 100ms ease-in;
+}
+
+.footerNavItems:hover{
+    color: var(--color-accent);
+}
+
+.copy-popup {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #000;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 10px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(20px);
+  transition: all 0.3s ease;
+  font-family: Roboto, sans-serif;
+}
+
+/* класс, который активирует анимацию */
+.copy-popup.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* === Пример: переопределение переменных для тёмной темы ===
+   (если захочешь включить тёмную тему — достаточно добавить class="dark" на <body>)
+*/
+body.dark {
+    --color-bg: #121212;
+    --color-text: #ffffff;
+    --color-white: #1e1e1e;
+    --color-black: #ffffff;
+    --color-accent: #F8303E; /* можно заменить при желании */
+    --color-dark-gray: #333333;
+    --color-gray-light: #444444;
+    --color-gray-medium: #666666;
+    --color-gray-text: #cccccc;
+    --selection-bg: var(--color-accent);
+    --selection-text: var(--color-white);
+    --border-color: #444444;
+    --footer-border-color: #444444;
+}
